@@ -1,6 +1,6 @@
 var counter =0;
 
-var firebaseConfig = {
+var Config = {
     apiKey: "AIzaSyDWlFxDEJNyiPbZk43lJNUTspUj4jKa9ds",
     authDomain: "trainschedule-9cf77.firebaseapp.com",
     databaseURL: "https://trainschedule-9cf77.firebaseio.com",
@@ -10,9 +10,9 @@ var firebaseConfig = {
     appId: "1:209290900216:web:92227264757055c32d010d"
 };
   // Initialize Firebase
-  firebase.initializeApp(firebaseConfig);
+  firebase.initializeApp(Config);
 
-  var database = firebaseConfig.databaseURL();
+  var database = firebase.databaseURL();
 
   $("#submit-button").on("click", function(){
       event.preventDefault();
