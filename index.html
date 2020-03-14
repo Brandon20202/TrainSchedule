@@ -8,7 +8,8 @@
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-    <script src="https://www.gstatic.com/firebasejs/7.1.0/firebase-app.js"></script>                                    
+    <script src="https://www.gstatic.com/firebasejs/6.0.4/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.0.4/firebase-database.js"></script>                                    
     <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
 
 </head>
@@ -26,89 +27,22 @@
             </div>
         </div>
 
-        <div class="row">
-            <div class="col-sm-2">
-                <h5>Train Name</h5>
-            </div>
-            <div class="col-sm-2">
-                <h5>Destination</h5>
-            </div>
-            <div class="col-sm-2">
-                <h5>Frequency(min)</h5>
-            </div>
-            <div class="col-sm-2">
-                <h5>Next Arrival</h5>
-            </div>
-            <div class="col-sm-2">
-                <h5>Minutes Away</h5>
-            </div>
+        <div class="panel-body">
+
+            <table class="table table-striped" id="train-table">
+                <tr>
+                    <th>Train Name</th>
+                    <th>Destination</th>
+                    <th>Frequency (min)</th>
+                    <th>Next Arrival</th>
+                    <th>Minutes Away</th>
+                </tr>
+            </table>
+    
+          </div>
+    
         </div>
-
-        <div class="row">
-            
-            <div class="col-sm-2">
-                <ul class="list-group list-group-flush">
-                    <li class="list-group-item" id="first-shell-table"></li>
-                    <li class="list-group-item" id="second-shell-table"></li>
-                    <li class="list-group-item" id="third-shell-table"></li>
-                    <li class="list-group-item"id="fourth-shell-table"></li>
-                    <li class="list-group-item" id="fifth-shell-table"></li>
-                    <li class="list-group-item" id="sixth-shell-table"></li>
-                    <li class="list-group-item" id="seventh-shell-table"></li>
-                    <li class="list-group-item"id="eighth-shell-table"></li>
-                </ul>
-            </div>
-
-            <div class="col-sm-2">
-                <ul class="list-group list-group-flush">
-                    <li class="list-group-item" id="first-shell-table2"></li>
-                    <li class="list-group-item" id="second-shell-table2"></li>
-                    <li class="list-group-item" id="third-shell-table2"></li>
-                    <li class="list-group-item"id="fourth-shell-table2"></li>
-                    <li class="list-group-item" id="fifth-shell-table2"></li>
-                    <li class="list-group-item" id="sixth-shell-table2"></li>
-                    <li class="list-group-item" id="seventh-shell-table2"></li>
-                    <li class="list-group-item"id="eighth-shell-table2"></li>
-            </div>
-
-            <div class="col-sm-2">
-                <ul class="list-group list-group-flush">
-                    <li class="list-group-item" id="first-shell-table3"></li>
-                    <li class="list-group-item" id="second-shell-table3"></li>
-                    <li class="list-group-item" id="third-shell-table3"></li>
-                    <li class="list-group-item"id="fourth-shell-table3"></li>
-                    <li class="list-group-item" id="fifth-shell-table3"></li>
-                    <li class="list-group-item" id="sixth-shell-table3"></li>
-                    <li class="list-group-item" id="seventh-shell-table3"></li>
-                    <li class="list-group-item"id="eighth=shell-table3"></li>
-                </ul>
-            </div>
-
-            <div class="col-sm-2">
-                <ul class="list-group list-group-flush">
-                    <li class="list-group-item" id="first-shell-table4"></li>
-                    <li class="list-group-item" id="second-shell-table4"></li>
-                    <li class="list-group-item" id="third-shell-table4"></li>
-                    <li class="list-group-item"id="fourth-shell-table4"></li>
-                    <li class="list-group-item" id="fifth-shell-table4"></li>
-                    <li class="list-group-item" id="sixth-shell-table4"></li>
-                    <li class="list-group-item" id="seventh-shell-table4"></li>
-                    <li class="list-group-item"id="eighth-shell-table4"></li>
-                </ul>
-            </div>
-
-            <div class="col-sm-2">
-                <ul class="list-group list-group-flush">
-                    <li class="list-group-item" id="first-shell-table5"></li>
-                    <li class="list-group-item" id="second-shell-table5"></li>
-                    <li class="list-group-item" id="third-shell-table5"></li>
-                    <li class="list-group-item"id="fourth-shell-table5"></li>
-                    <li class="list-group-item" id="fifth-shell-table5"></li>
-                    <li class="list-group-item" id="sixth-shell-table5"></li>
-                    <li class="list-group-item" id="seventh-shell-table5"></li>
-                    <li class="list-group-item"id="eighth-shell-table5"></li>
-                </ul>
-            </div>
+        
 
         </div>
         
