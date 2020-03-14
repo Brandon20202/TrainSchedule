@@ -63,8 +63,6 @@ data.ref().on('child_added', function(childSnapshot) {
     $("#train-row-" + counter).append(trainDestinationTd);
     
 
-
-    
     var firstTimeConverted = moment(childSnapshot.val().time, "hh:mm").subtract(1, "years");
     var diffTime = moment().diff(moment(firstTimeConverted), "minutes");
     var tRemainder = diffTime % childSnapshot.val().frequency;
