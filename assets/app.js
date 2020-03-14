@@ -3,7 +3,7 @@ var counter =0;
 var Config = {
     apiKey: "AIzaSyDWlFxDEJNyiPbZk43lJNUTspUj4jKa9ds",
     authDomain: "trainschedule-9cf77.firebaseapp.com",
-    databaseURL: "https://trainschedule-9cf77.firebaseio.com",
+    databaseURL: "https://trainschedule-9cf77.firebaseio.com/",
     projectId: "trainschedule-9cf77",
     storageBucket: "trainschedule-9cf77.appspot.com",
     messagingSenderId: "209290900216",
@@ -34,7 +34,12 @@ var Config = {
           destination: trainDestination,
           time: trainTime,
           frequency: trainFrequency
+
         });
+        $("#first-shell-table").text(trainName);
+        $("second-shell-table").text(trainDestination);
+
+
   });
 
 
